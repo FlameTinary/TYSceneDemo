@@ -21,12 +21,22 @@
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTs-L8-2SX">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </sceneKitView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfR-aQ-49w">
+                                <rect key="frame" x="253" y="94" width="111" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="点击去地球仪"/>
+                                <connections>
+                                    <action selector="globeClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVV-tI-Qba"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="NfR-aQ-49w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="FcZ-Ui-JNg"/>
                             <constraint firstItem="FTs-L8-2SX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jpw-uG-WdP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FTs-L8-2SX" secondAttribute="trailing" id="KL2-ay-96Y"/>
                             <constraint firstItem="FTs-L8-2SX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="USs-br-J83"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NfR-aQ-49w" secondAttribute="trailing" constant="50" id="j5j-wB-7xg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FTs-L8-2SX" secondAttribute="bottom" id="qBi-qZ-6Sq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

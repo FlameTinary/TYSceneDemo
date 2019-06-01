@@ -14,6 +14,10 @@
 		082015BA22A2284E00F58A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082015B822A2284E00F58A12 /* LaunchScreen.storyboard */; };
 		082015BD22A2284E00F58A12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 082015BC22A2284E00F58A12 /* main.m */; };
 		0820160F22A26A1300F58A12 /* ship.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0820160E22A26A1300F58A12 /* ship.scnassets */; };
+		085FDDBE22A282940058990C /* GlobeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 085FDDBD22A282940058990C /* GlobeViewController.m */; };
+		085FDDC122A287370058990C /* GlobeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 085FDDC022A287370058990C /* GlobeScene.m */; };
+		085FDDC322A289950058990C /* earth_land_day.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085FDDC222A289950058990C /* earth_land_day.jpg */; };
+		085FDDC522A291DA0058990C /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 085FDDC422A291DA0058990C /* timg.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,12 @@
 		082015BB22A2284E00F58A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		082015BC22A2284E00F58A12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0820160E22A26A1300F58A12 /* ship.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = ship.scnassets; sourceTree = "<group>"; };
+		085FDDBC22A282940058990C /* GlobeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobeViewController.h; sourceTree = "<group>"; };
+		085FDDBD22A282940058990C /* GlobeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobeViewController.m; sourceTree = "<group>"; };
+		085FDDBF22A287370058990C /* GlobeScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobeScene.h; sourceTree = "<group>"; };
+		085FDDC022A287370058990C /* GlobeScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobeScene.m; sourceTree = "<group>"; };
+		085FDDC222A289950058990C /* earth_land_day.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earth_land_day.jpg; sourceTree = "<group>"; };
+		085FDDC422A291DA0058990C /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +75,12 @@
 				082015AE22A2284D00F58A12 /* AppDelegate.m */,
 				082015B022A2284D00F58A12 /* ViewController.h */,
 				082015B122A2284D00F58A12 /* ViewController.m */,
+				085FDDBC22A282940058990C /* GlobeViewController.h */,
+				085FDDBD22A282940058990C /* GlobeViewController.m */,
+				085FDDBF22A287370058990C /* GlobeScene.h */,
+				085FDDC022A287370058990C /* GlobeScene.m */,
+				085FDDC222A289950058990C /* earth_land_day.jpg */,
+				085FDDC422A291DA0058990C /* timg.jpeg */,
 				082015B322A2284D00F58A12 /* Main.storyboard */,
 				082015B622A2284E00F58A12 /* Assets.xcassets */,
 				082015B822A2284E00F58A12 /* LaunchScreen.storyboard */,
@@ -133,6 +149,8 @@
 			files = (
 				082015BA22A2284E00F58A12 /* LaunchScreen.storyboard in Resources */,
 				082015B722A2284E00F58A12 /* Assets.xcassets in Resources */,
+				085FDDC522A291DA0058990C /* timg.jpeg in Resources */,
+				085FDDC322A289950058990C /* earth_land_day.jpg in Resources */,
 				082015B522A2284D00F58A12 /* Main.storyboard in Resources */,
 				0820160F22A26A1300F58A12 /* ship.scnassets in Resources */,
 			);
@@ -145,8 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085FDDBE22A282940058990C /* GlobeViewController.m in Sources */,
 				082015B222A2284D00F58A12 /* ViewController.m in Sources */,
 				082015BD22A2284E00F58A12 /* main.m in Sources */,
+				085FDDC122A287370058990C /* GlobeScene.m in Sources */,
 				082015AF22A2284D00F58A12 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

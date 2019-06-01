@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 #import <SceneKit/SceneKit.h>
-#import <ARKit/ARKit.h>
+#import "GlobeViewController.h"
 
-@interface ViewController ()<ARSCNViewDelegate>
+@interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet SCNView *sceneView;
 
@@ -50,17 +50,59 @@
     [scene.rootNode addChildNode:ambientLightNode];
     
     
-    SCNNode *myship = [scene.rootNode childNodeWithName:@"myship" recursively:YES];
-    
-    [myship runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:2 z:0 duration:1]]];
+//    SCNNode *myship = [scene.rootNode childNodeWithName:@"myship" recursively:YES];
+//
+//    [myship runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:2 z:0 duration:1]]];
     
     self.sceneView.scene = scene;
     
     self.sceneView.allowsCameraControl = YES;
     
+    // 添加点击动作
+    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     
+    NSMutableArray *gestureRecognizers = [NSMutableArray array];
+    
+    [gestureRecognizers addObject:tapGesture];
+    [gestureRecognizers addObjectsFromArray:_sceneView.gestureRecognizers];
+    _sceneView.gestureRecognizers = gestureRecognizers;
     
 }
 
+- (void)handleTap:(UITapGestureRecognizer *)gestureRecognize {
+    
+    CGPoint p = [gestureRecognize locationInView:_sceneView];
+    //NSLog(@"点击了:%@", p);
+    NSArray *hitResults = [_sceneView hitTest:p options:nil];
+    
+    if ([hitResults count] > 0) {
+        
+        SCNHitTestResult * result = [hitResults firstObject];
+        
+        SCNMaterial *material = result.node.geometry.firstMaterial;
+        
+        [SCNTransaction begin];
+        [SCNTransaction setAnimationDuration:0.5];
+        
+        // on completion - unhighlight
+        [SCNTransaction setCompletionBlock:^{
+            [SCNTransaction begin];
+            [SCNTransaction setAnimationDuration:0.5];
+            
+            material.emission.contents = [UIColor blackColor];
+            
+            [SCNTransaction commit];
+        }];
+        
+        material.emission.contents = [UIColor redColor];
+        
+        [SCNTransaction commit];
+    }
+}
+- (IBAction)globeClick:(UIButton *)sender {
+    
+    [self presentViewController:[GlobeViewController new] animated:YES completion:nil];
+    
+}
 
 @end
